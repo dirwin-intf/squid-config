@@ -30,8 +30,10 @@ currentWallpaper = `#{command}`.chomp
 command = "ls #{assets} | sort -R | tail -1"
 newWallpaper = `#{command}`.chomp
 
-while(newWallpaper.equal?(currentWallpaper)) do
+gateKeeper = newWallpaper.equal?(currentWallpaper)
+while(gateKeeper) do
   newWallpaper = `#{command}`.chomp
+  gateKeeper = newWallpaper.equal?(currentWallpaper)
 end
 
 command = "echo \"#{newWallpaper}\" > #{currentWallpaperFile}"
