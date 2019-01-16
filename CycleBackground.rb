@@ -1,6 +1,8 @@
 require 'pry'
 
 polybarConfig = "~/.config/polybar/config"
+currentWallpaperFile = "#{__dir__}/currentWallpaper.txt"
+assets = "#{__dir__}/assets"
 
 map = {
   "deadcells_1.png" => ["#111D0D", "#98FFDE", "#2C4866"],
@@ -13,26 +15,36 @@ map = {
   "hollowknight_3.jpg" => ["#0F101F", "#FFFFFF", "#26364D"]
 }
 
-command = "grep -e \"master-background = *\" " + polybarConfig
+command = "grep -e \"master-background = *\" #{polybarConfig}"
 oldBackground = `#{command}`.chomp
 
-command = "grep -e \"master-foreground = *\" " + polybarConfig
+command = "grep -e \"master-foreground = *\" #{polybarConfig}"
 oldForeground = `#{command}`.chomp
 
-command = "grep -e \"master-alternate = *\" " + polybarConfig
+command = "grep -e \"master-alternate = *\" #{polybarConfig}"
 oldAlternate = `#{command}`.chomp
 
-command = "ls " + __dir__ + "/assets | sort -R | tail -1"
+command = "head -1 #{currentWallpaperFile}"
+currentWallpaper = `#{command}`.chomp
+
+command = "ls #{assets} | sort -R | tail -1"
 newWallpaper = `#{command}`.chomp
+
+while(newWallpaper.equal?(currentWallpaper)) do
+  newWallpaper = `#{command}`.chomp
+end
+
+command = "echo \"#{newWallpaper}\" > #{currentWallpaperFile}"
+`#{command}`
 
 newBackground = "master-background = " + map[newWallpaper][0]
 newForeground = "master-foreground = " + map[newWallpaper][1]
 newAlternate = "master-alternate = " + map[newWallpaper][2]
 
-command = "sed -i -e \"s/" + oldBackground + "/" + newBackground + "/g\" "\
-               + "-e \"s/" + oldForeground + "/" + newForeground + "/g\" "\
-               + "-e \"s/" + oldAlternate + "/" + newAlternate + "/g\" " + polybarConfig
+command = "sed -i -e \"s/#{oldBackground}/#{newBackground}/g\" "\
+               + "-e \"s/#{oldForeground}/#{newForeground}/g\" "\
+               + "-e \"s/#{oldAlternate}/#{newAlternate}/g\" #{polybarConfig}"
 `#{command}`
 
-newWallpaperPath = __dir__ + "/assets/" + newWallpaper
+newWallpaperPath = "#{__dir__}/assets/#{newWallpaper}"
 puts newWallpaperPath
