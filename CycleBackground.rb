@@ -12,7 +12,8 @@ map = {
   "deadcells_5.png" => ["#221720", "#B6AB95", "#4C304B"],
   "hollowknight_1.jpg" => ["#050A25", "#F1F2E6", "#0A4151"],
   "hollowknight_2.jpg" => ["#181F39", "#C8BBC4", "#293952"],
-  "hollowknight_3.jpg" => ["#0F101F", "#FFFFFF", "#26364D"]
+  "hollowknight_3.jpg" => ["#0F101F", "#FFFFFF", "#26364D"],
+  "secret_island.png" => ["#322439","#FBCFAA","#7B658D"]
 }
 
 command = "grep -e \"master-background = *\" #{polybarConfig}"
