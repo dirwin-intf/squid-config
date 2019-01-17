@@ -3,9 +3,9 @@ dir=`dirname "$0"`
 
 [ ! -f $dir/currentWallpaper.txt ] && touch $dir/currentWallpaper.txt && echo "placeholder" > $dir/currentWallpaper.txt
 
-newbg=`ruby $dir/CycleBackground.rb`
+newbg=`ruby $dir/CycleBackground.rb $1`
 
 nitrogen $newbg --set-zoom-fill
-pkill polybar
-polybar bottom &
-polybar top &
+pkill polybar &> /dev/null
+polybar bottom &> /dev/null &
+polybar top &> /dev/null &
