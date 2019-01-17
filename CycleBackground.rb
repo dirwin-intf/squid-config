@@ -1,9 +1,10 @@
-require 'pry'
-
+# set constants
 polybarConfig = "~/.config/polybar/config"
 currentWallpaperFile = "#{__dir__}/currentWallpaper.txt"
 assets = "#{__dir__}/assets"
 
+# key value pairs in the form of { filename, [backgroundColor, fontColor, highlightColor] }
+# this is used when invoking sed later
 map = {
   "deadcells_1.png" => ["#111D0D", "#C4C0C2", "#2C4866"],
   "deadcells_3.png" => ["#0C0F2D", "#BB83A0", "#3D2C50"],
@@ -20,6 +21,7 @@ map = {
   "fighting_sleep.png" => ["#271F37", "#EAE7EB", "#8C4E6C"]
 }
 
+# grab all the old values so we can invoke sed later and replace them
 command = "grep -e \"master-background = *\" #{polybarConfig}"
 oldBackground = `#{command}`.chomp
 
@@ -29,22 +31,27 @@ oldForeground = `#{command}`.chomp
 command = "grep -e \"master-alternate = *\" #{polybarConfig}"
 oldAlternate = `#{command}`.chomp
 
-command = "head -1 #{currentWallpaperFile}"
-currentWallpaper = `#{command}`.chomp
-
 if ARGV[0] != nil and map[ARGV[0]] != nil
   newWallpaper = ARGV[0]
 else
-  command = "ls #{assets} | sort -R | tail -1"
-  newWallpaper = `#{command}`.chomp
-  while(newWallpaper.eql?(currentWallpaper)) do
+  # grab the current wallpaper so we can make sure the new one that is
+  # randomly chosen isn't the same
+  command = "head -1 #{currentWallpaperFile}"
+  currentWallpaper = `#{command}`.chomp
+
+  loop do
+    command = "ls #{assets} | sort -R | tail -1"
     newWallpaper = `#{command}`.chomp
+
+    break if !newWallpaper.eql?(currentWallpaper)
   end
 end
 
+# write the current wallpaper to file for posterity
 command = "echo \"#{newWallpaper}\" > #{currentWallpaperFile}"
 `#{command}`
 
+# build up our replacement sed expressions
 newBackground = "master-background = " + map[newWallpaper][0]
 newForeground = "master-foreground = " + map[newWallpaper][1]
 newAlternate = "master-alternate = " + map[newWallpaper][2]
@@ -54,5 +61,6 @@ command = "sed -i -e \"s/#{oldBackground}/#{newBackground}/g\" "\
                + "-e \"s/#{oldAlternate}/#{newAlternate}/g\" #{polybarConfig}"
 `#{command}`
 
+# echo the path to the new wallpaper so that nitrogen can select it
 newWallpaperPath = "#{__dir__}/assets/#{newWallpaper}"
 puts newWallpaperPath
