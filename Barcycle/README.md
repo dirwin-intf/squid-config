@@ -23,7 +23,7 @@ set on your polybar when switching the background.
 
 Make sure `CycleBackground.rb` is pointed at your polybar config.
 
-##Usage
+## Usage
 Invoke `execute.sh` after following the set up steps above.  You can pick a specific
 color pallette and background by supplying the filename of an image in the `assets`
 directory and it will switch to that one specifically.
