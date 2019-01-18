@@ -5,7 +5,7 @@ only uses three main colors).
 
 Requires nitrogen, ruby, sed, and grep. Doesn't make sense to use without polybar.
 
-##Set Up
+## Set Up
 Create in the colors section of your polybar the following three colors:
   - `master-background`
   - `master-foreground`
