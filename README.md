@@ -5,10 +5,10 @@ A utility that rotates the pallette of polybar and i3 based on desktop backgroun
 For out of the box use, requires nitrogen, ruby, sed, and grep.
 
 ## Set Up
-Copy your polybar/i3 configurations to the respective `conf` directories in `Barcycle` and `i3cycle`,
-and make sure `configPaths.sh` is pointed to the correct locations.
+Copy and separate into sections based on functionality your polybar/i3 configurations to the `conf` directories in `Barcycle` and `i3cycle`,
+and make sure `configPaths.sh` is pointed to the correct locations. I have my own config files in there as examples.
 
-Fill `assets` in the project's root directory with all your wallpapers, and for each wallpaper pick three colors - 
+Fill `assets` in the project's root directory with all your wallpapers, and for each wallpaper pick three colors:
 `master-background`, `master-foreground`, and `master-alternate`.
 
 The philisophy to follow here is:
