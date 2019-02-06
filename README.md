@@ -4,7 +4,7 @@ A utility that rotates the pallette of polybar and i3 based on desktop backgroun
 
 For out of the box use, requires nitrogen, ruby, sed, and grep.
 
-##Set Up
+## Set Up
 Copy and separate into sections based on functionality your polybar/i3 configurations to the `conf` directories in `Barcycle` and `i3cycle`,
 and make sure `configPaths.sh` is pointed to the correct locations. I have my own config files in there as examples.
 
