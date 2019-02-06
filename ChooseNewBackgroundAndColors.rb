@@ -1,6 +1,6 @@
-require './PalletteMap.rb'
-require './Barcycle/ReplaceColors.rb'
-require './i3cycle/ReplaceColors.rb'
+require_relative './PalletteMap.rb'
+require_relative './Barcycle/ReplaceColors.rb'
+require_relative './i3cycle/ReplaceColors.rb'
 
 # set constants
 currentWallpaperFile = "#{__dir__}/currentWallpaper.txt"
@@ -25,7 +25,7 @@ end
 ReplacePolybarColors.replaceColors(newWallpaper)
 ReplaceI3Colors.replaceColors(newWallpaper)
 
-# write the current wallpaper to file for posterity
+# write the new wallpaper to file for posterity
 command = "echo \"#{newWallpaper}\" > #{currentWallpaperFile}"
 `#{command}`
 

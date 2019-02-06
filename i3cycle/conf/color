@@ -3,7 +3,7 @@
 ##########
 
 # class border backgr. text indicator child_border
-client.focused #000000 #2C4866 #C4C0C2 #000000 #000000
-client.focused_inactive #000000 #2C4866 #C4C0C2 #000000 #000000
-client.unfocused #000000 #111D0D #373737 #000000 #000000
+client.focused #000000 #7B658D #FBCFAA #000000 #000000
+client.focused_inactive #000000 #7B658D #FBCFAA #000000 #000000
+client.unfocused #000000 #322439 #373737 #000000 #000000
 
