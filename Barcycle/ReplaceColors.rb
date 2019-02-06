@@ -1,4 +1,4 @@
-require '../PalletteMap.rb'
+require_relative '../PalletteMap.rb'
 
 module ReplacePolybarColors
   def self.replaceColors newWallpaper
@@ -15,9 +15,9 @@ module ReplacePolybarColors
     oldAlternate = `#{command}`.chomp
 
     # build up our replacement sed expressions
-    newBackground = "master-background = " + PalletteMap::palletteMap[newWallpaper][0]
-    newForeground = "master-foreground = " + PalletteMap::palletteMap[newWallpaper][1]
-    newAlternate = "master-alternate = " + PalletteMap::palletteMap[newWallpaper][2]
+    newBackground = "master-background = " + PalletteMap.palletteMap[newWallpaper][0]
+    newForeground = "master-foreground = " + PalletteMap.palletteMap[newWallpaper][1]
+    newAlternate = "master-alternate = " + PalletteMap.palletteMap[newWallpaper][2]
 
     command = "sed -i -e \"s/#{oldBackground}/#{newBackground}/g\" "\
       + "-e \"s/#{oldForeground}/#{newForeground}/g\" "\

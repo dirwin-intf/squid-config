@@ -1,4 +1,4 @@
-require '../PalletteMap.rb'
+require_relative '../PalletteMap.rb'
 
 module ReplaceI3Colors
   def self.replaceColors newWallpaper
@@ -18,9 +18,9 @@ module ReplaceI3Colors
     oldUnfocused = `#{command}`.chomp
     oldUnfocusedArr = oldUnfocused.split(' ');
 
-    masterBackground = PalletteMap::palletteMap[newWallpaper][0]
-    masterForeground = PalletteMap::palletteMap[newWallpaper][1]
-    masterAlternate = PalletteMap::palletteMap[newWallpaper][2]
+    masterBackground = PalletteMap.palletteMap[newWallpaper][0]
+    masterForeground = PalletteMap.palletteMap[newWallpaper][1]
+    masterAlternate = PalletteMap.palletteMap[newWallpaper][2]
 
     # replace the background and text, of focused and focused_inactive
     oldFocusedArr[2] = masterAlternate
@@ -34,7 +34,7 @@ module ReplaceI3Colors
     oldUnfocusedArr[2] = masterBackground
 
     # create the new values to be used in sed
-    newFocused = oldUnfocusedArr.join(' ')
+    newFocused = oldFocusedArr.join(' ')
     newInactiveFocused = oldInactiveFocusedArr.join(' ')
     newUnfocused = oldUnfocusedArr.join(' ')
 

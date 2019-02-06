@@ -4,7 +4,7 @@ conf="$dir/conf"
 source $dir/../configPaths.sh
 
 cat $conf/base \
-    $conf/colors \
+    $conf/color \
     $conf/behavior \
     $conf/hardware \
     $conf/autostart \
