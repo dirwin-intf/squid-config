@@ -1,0 +1,32 @@
+[bar/top]
+modules-left = pulseaudio backlight
+modules-center = i3
+
+tray-position = right
+tray-padding = 5
+tray-maxsize = 30
+
+override-redirect=true
+wm-restack = i3
+
+dpi=200
+monitor = ${env:MONITOR:eDP1}
+
+width = 40%
+height = 55
+offset-x = 30%
+offset-y = 12
+fixed-center = true
+
+background = ${colors.master-background}
+foreground = ${colors.master-foreground}
+
+font-0 = InconsolataGo Nerd Font Mono:size=12.5;5
+font-1 = InconsolataGo Nerd Font Mono:size=17;8
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 1
+
