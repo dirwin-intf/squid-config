@@ -12,5 +12,5 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $alt+space exec gnome-screenshot --interactive
 
 # switch aesthetics
-bindsym $mod+a exec ~/dev/scripts/squid-config/Barcycle/execute.sh
+bindsym $mod+a exec ~/dev/scripts/squid-config/execute.sh
 
