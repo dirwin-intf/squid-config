@@ -1,9 +1,0 @@
-##########
-# COLORS #
-##########
-
-# class border backgr. text indicator child_border
-client.focused #000000 #2C4866 #C4C0C2 #000000 #2C4866
-client.focused_inactive #000000 #2C4866 #C4C0C2 #000000 #2C4866
-client.unfocused #000000 #111D0D #424242 #000000 #2A1F31
-
