@@ -1,0 +1,22 @@
+#############
+# AUTOSTART #
+#############
+
+# set the desktop background on startup
+exec --no-startup-id ~/dev/scripts/squid-config/Barcycle/execute.sh
+
+# start the compositor on startup
+exec --no-startup-id compton
+
+# start gestures on startup
+exec --no-startup-id libinput-gestures
+
+# set default track pad speed and allow tap clicking
+exec --no-startup-id ~/dev/scripts/setTrackpadDefaults.sh
+
+# disable touchscreen on startup
+exec --no-startup-id xinput disable "SYNA7813:00 06CB:1786"
+
+# start network manager tray applet on startup
+exec --no-startup-id nm-applet
+

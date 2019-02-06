@@ -1,0 +1,16 @@
+###################
+# LAUNCH BINDINGS #
+###################
+
+# start a terminal
+bindsym $mod+Return exec gnome-terminal
+
+# start i3-dmenu-desktop (a program launcher)
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# take a screen shot
+bindsym $alt+space exec gnome-screenshot --interactive
+
+# switch aesthetics
+bindsym $mod+a exec ~/dev/scripts/squid-config/Barcycle/execute.sh
+
