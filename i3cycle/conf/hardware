@@ -17,3 +17,6 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 # decrease brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
+# toggle touchscreen enabled state
+bindsym $alt+l exec /home/dirwin/dev/scripts/toggleTouchScreen.sh
+
