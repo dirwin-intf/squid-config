@@ -30,8 +30,9 @@ module ReplaceI3Colors
     oldInactiveFocusedArr[2] = masterAlternate
     oldInactiveFocusedArr[3] = masterForeground
 
-    # replace the background of unfocused
+    # replace the background and text of unfocused
     oldUnfocusedArr[2] = masterBackground
+    oldUnfocusedArr[3] = masterForeground
 
     # create the new values to be used in sed
     newFocused = oldFocusedArr.join(' ')
