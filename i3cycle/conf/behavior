@@ -25,5 +25,5 @@ focus_follows_mouse yes
 
 # global gaps settings
 gaps outer 28
-gaps inner 10
+gaps inner 7
 
