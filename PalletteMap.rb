@@ -16,10 +16,10 @@ module PalletteMap
       "great_wave.png" =>         ["#070B1A", "#D7C9AA", "#535D5C"],
       "master_sword.png" =>       ["#1C212F", "#9ECAA4", "#486363"],
       "fighting_sleep.png" =>     ["#271F37", "#EAE7EB", "#8C4E6C"],
-      "dock.jpg" =>               ["#343A53", "#F0E9D7", "#647875"],
-      "overgrown_area.png" =>     ["#22262E", "#C5B585", "#90B38F"],
+      "dock.jpg" =>               ["#343A53", "#F0E9D7", "#CCA898"],
+      "overgrown_arena.png" =>     ["#22262E", "#C5B585", "#5D7333"],
       "dragons_keep.png" =>       ["#291508", "#FFF396", "#963A09"],
-      "farm.png" =>               ["#401212", "#FDEE91", "#749664"]
+      "farm.png" =>               ["#401212", "#FDEE91", "#8F700A"]
     }
   end
 end
