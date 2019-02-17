@@ -1,7 +1,7 @@
 module PalletteMap
   # key value pairs in the form of { filename, [backgroundColor, fontColor, highlightColor] }
   # this is used when invoking sed later
-  def self.palletteMap 
+  def self.palletteMap
     {
       "deadcells_1.png" =>        ["#111D0D", "#C4C0C2", "#2C4866"],
       "deadcells_3.png" =>        ["#0C0F2D", "#BB83A0", "#3D2C50"],
@@ -15,7 +15,11 @@ module PalletteMap
       "snowy_forest.png" =>       ["#13102F", "#9DBCDD", "#2D4270"],
       "great_wave.png" =>         ["#070B1A", "#D7C9AA", "#535D5C"],
       "master_sword.png" =>       ["#1C212F", "#9ECAA4", "#486363"],
-      "fighting_sleep.png" =>     ["#271F37", "#EAE7EB", "#8C4E6C"]
+      "fighting_sleep.png" =>     ["#271F37", "#EAE7EB", "#8C4E6C"],
+      "dock.jpg" =>               ["#343A53", "#F0E9D7", "#647875"],
+      "overgrown_area.png" =>     ["#22262E", "#C5B585", "#90B38F"],
+      "dragons_keep.png" =>       ["#291508", "#FFF396", "#963A09"],
+      "farm.png" =>               ["#401212", "#FDEE91", "#749664"]
     }
   end
 end
