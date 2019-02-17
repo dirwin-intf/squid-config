@@ -4,7 +4,7 @@ module PalletteMap
   def self.palletteMap
     {
       "deadcells_1.png" =>        ["#111D0D", "#C4C0C2", "#2C4866"],
-      "deadcells_3.png" =>        ["#0C0F2D", "#BB83A0", "#3D2C50"],
+      "deadcells_3.png" =>        ["#0C0F2D", "#E9E7DA", "#514397"],
       "deadcells_4.jpg" =>        ["#141B2E", "#EAE1D1", "#402B70"],
       "deadcells_5.png" =>        ["#221720", "#B6AB95", "#4C304B"],
       "secret_island.png" =>      ["#322439", "#FBCFAA", "#7B658D"],
@@ -14,12 +14,11 @@ module PalletteMap
       "hyperlight_drifter.png" => ["#2A1F31", "#BBC7C9", "#5F2B53"],
       "snowy_forest.png" =>       ["#13102F", "#9DBCDD", "#2D4270"],
       "great_wave.png" =>         ["#070B1A", "#D7C9AA", "#535D5C"],
-      "master_sword.png" =>       ["#1C212F", "#9ECAA4", "#486363"],
       "fighting_sleep.png" =>     ["#271F37", "#EAE7EB", "#8C4E6C"],
-      "dock.jpg" =>               ["#343A53", "#F0E9D7", "#CCA898"],
+      "dock.jpg" =>               ["#343A53", "#F0E9D7", "#2D989C"],
       "overgrown_arena.png" =>     ["#22262E", "#C5B585", "#5D7333"],
       "dragons_keep.png" =>       ["#291508", "#FFF396", "#963A09"],
-      "farm.png" =>               ["#401212", "#FDEE91", "#8F700A"]
+      "farm.png" =>               ["#401212", "#FDEE91", "#6D4A0D"]
     }
   end
 end
