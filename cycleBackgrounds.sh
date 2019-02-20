@@ -1,5 +1,6 @@
+dirName=`dirname "$0"`
 while :
 do
-  ./execute.sh
+  $dirName/execute.sh
   sleep 600
 done
