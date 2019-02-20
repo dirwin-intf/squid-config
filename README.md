@@ -1,6 +1,6 @@
 Squid Config
 ============
-A utility that rotates the pallette of polybar and i3 based on desktop background.
+A utility that rotates the pallette of polybar and i3 based on desktop background. Also acts as a dotfiles repo.
 
 For out of the box use, requires nitrogen, ruby, sed, and grep.
 
