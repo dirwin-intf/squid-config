@@ -1,3 +1,4 @@
+#!/bin/bash
 dirName=`dirname "$0"`
 while :
 do
