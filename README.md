@@ -16,7 +16,7 @@ The philisophy to follow here is:
   - `master-foreground` corresponds to the color of your font in polybar and i3
   - `master-alternate` corresponds to your highlight color - eg, the active container in 3 or active workspace on a polybar ws module
 
-Place the chosen colors in `PalletteMap.rb` as key value pairs structured as `{ wallpapername.extension, [ master-background, master-foreground, master-alternate ] }`.
+Place the chosen colors in `PalletteMap.rb` as key value pairs structured as `"wallpapername.extension" => [ "master-background", "master-foreground", "master-alternate" ]`.
 
 Any background that lives in the `assets` folder of the root directory MUST have a corresponding entry in
 `PalletteMap.rb`, this is how the program determines what colors to set on polybar and i3 when switching the background.
