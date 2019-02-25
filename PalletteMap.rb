@@ -3,7 +3,6 @@ module PalletteMap
   # this is used when invoking sed later
   def self.palletteMap
     {
-      "deadcells_1.png" =>        ["#111D0D", "#C4C0C2", "#2C4866"],
       "deadcells_3.png" =>        ["#0C0F2D", "#E9E7DA", "#514397"],
       "deadcells_4.jpg" =>        ["#141B2E", "#EAE1D1", "#402B70"],
       "deadcells_5.png" =>        ["#221720", "#B6AB95", "#4C304B"],
