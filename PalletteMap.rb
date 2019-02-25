@@ -18,7 +18,8 @@ module PalletteMap
       "dock.jpg" =>               ["#343A53", "#F0E9D7", "#2D989C"],
       "overgrown_arena.png" =>    ["#22262E", "#C5B585", "#5D7333"],
       "dragons_keep.png" =>       ["#291508", "#FFF396", "#963A09"],
-      "farm.png" =>               ["#401212", "#FDEE91", "#6D4A0D"]
+      "farm.png" =>               ["#401212", "#FDEE91", "#6D4A0D"],
+      "lonely_day.png" =>         ["#242237", "#FFF5D6", "#6F6790"]
     }
   end
 end
