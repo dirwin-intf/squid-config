@@ -6,6 +6,6 @@ dir=`dirname "$0"`
 
 newbg=`ruby $dir/ChooseNewBackgroundAndColors.rb $1`
 
-nitrogen $newbg --set-zoom-fill
+feh --bg-fill $newbg
 bash $dir/Barcycle/concatenate.sh
 bash $dir/i3cycle/concatenate.sh
