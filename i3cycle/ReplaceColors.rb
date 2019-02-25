@@ -27,7 +27,7 @@ module ReplaceI3Colors
     oldFocusedArr[3] = masterForeground
 
     # replace the background and text of focused_inactive
-    oldInactiveFocusedArr[2] = masterAlternate
+    oldInactiveFocusedArr[2] = masterBackground
     oldInactiveFocusedArr[3] = masterForeground
 
     # replace the background of unfocused
