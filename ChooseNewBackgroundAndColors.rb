@@ -29,6 +29,6 @@ ReplaceI3Colors.replaceColors(newWallpaper)
 command = "echo \"#{newWallpaper}\" > #{currentWallpaperFile}"
 `#{command}`
 
-# echo the path to the new wallpaper so that nitrogen can select it
+# echo the path to the new wallpaper so that execute.sh can consume it
 newWallpaperPath = "#{__dir__}/assets/#{newWallpaper}"
 puts newWallpaperPath
