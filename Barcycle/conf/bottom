@@ -1,6 +1,7 @@
 [bar/bottom]
 modules-left = memory cpu
 modules-right = wlan vpn battery date
+modules-center = xwindow
 
 override-redirect=true
 wm-restack = i3
