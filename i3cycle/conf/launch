@@ -5,8 +5,14 @@
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
 
-# start i3-dmenu-desktop (a program launcher)
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# start rofi in run mode
+bindsym $mod+d exec --no-startup-id rofi -show run
+
+# start rofi in window switch mode
+bindsym $mod+Tab exec --no-startup-id rofi -show window
+
+# start rofi in ssh mode
+bindsym $mod+Shift+d exec --no-startup-id rofi -show ssh
 
 # take a screen shot
 bindsym $alt+space exec gnome-screenshot --interactive
