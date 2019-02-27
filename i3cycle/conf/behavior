@@ -6,13 +6,14 @@
 default_border none
 default_floating_border none
 
-# always open slack on workspace 2
+# always open messaging clients on workspace 2
 assign [class="Slack"] workspace $2
 assign [class="discord"] workspace $2
 assign [class="Messenger for Desktop"] workspace $2
 
-# always open firefox on workspace 4
+# always open web browsers on workspace 4
 assign [class="Firefox"] workspace $4
+assign [class="Google-chrome"] workspace $4
 
 # always open spotify to workspace 3
 for_window [class="Spotify"] move to workspace $3
