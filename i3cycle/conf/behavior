@@ -11,12 +11,15 @@ assign [class="Slack"] workspace $2
 assign [class="discord"] workspace $2
 assign [class="Messenger for Desktop"] workspace $2
 
+# always open POSTman on workspace 3
+assign [class="Postman"] workspace $3
+
 # always open web browsers on workspace 4
 assign [class="Firefox"] workspace $4
 assign [class="Google-chrome"] workspace $4
 
-# always open spotify to workspace 3
-for_window [class="Spotify"] move to workspace $3
+# always open spotify to workspace 5
+for_window [class="Spotify"] move to workspace $5
 
 # gpick should always be floating
 for_window [class="Gpick"] floating enable
