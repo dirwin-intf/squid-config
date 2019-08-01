@@ -24,6 +24,7 @@ end
 
 ReplacePolybarColors.replaceColors(newWallpaper)
 ReplaceI3Colors.replaceColors(newWallpaper)
+# ReplaceRofiColors.replaceColors(newWallpaper)
 
 # write the new wallpaper to file for posterity
 command = "echo \"#{newWallpaper}\" > #{currentWallpaperFile}"

@@ -6,6 +6,6 @@ dir=`dirname "$0"`
 
 newbg=`ruby $dir/ChooseNewBackgroundAndColors.rb $1`
 
-feh --bg-fill $newbg
 bash $dir/Barcycle/concatenate.sh
 bash $dir/i3cycle/concatenate.sh
+feh --bg-fill $newbg
